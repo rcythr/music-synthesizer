@@ -2,7 +2,7 @@
     https://musescore.com/user/9292486/scores/2086106
 '''
 
-from music_generator import *
+from synth import *
 
 TEMPO = 120
 TIME = (3,4)
@@ -249,8 +249,8 @@ if __name__ == '__main__':
     voice_2.extend(MINUET_IN_G_VOICE_2_SECTION_1)
     voice_2.extend(MINUET_IN_G_VOICE_2_SECTION_1)
 
-    #import music_generator.wav as wav
-    #wav.serialize([[voice_1], [voice_2]], 'minuet_in_g.wav')
+    import synth.wav as wav
+    wav.serialize([[voice_1], [voice_2]], 'minuet_in_g.wav')
 
-    import music_generator.arduino as arduino
-    arduino.serialize([(12, [voice_1]), (10, [voice_2])], 'minuet_in_g.ino')
+    #import music_generator.arduino as arduino
+    #arduino.serialize([(12, [voice_1]), (10, [voice_2])], 'minuet_in_g.ino')
